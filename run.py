@@ -14,7 +14,19 @@ __________    _____    ____________________
 # Print each character one by one with a delay
 for char in ascii_art:
     print(char, end='', flush=True)
-    time.sleep(0.01)
+    time.sleep(0.005)
+
+print("\n")
+
+# Get the current working directory
+current_path = os.getcwd()
+
+# Print the current path in a menu format
+print("====================================")
+print("You are currently in: " + current_path)
+print("====================================")
+print("\n")
+
 
 # Prompt for the name of the repo and the path
 repo_name = input("Enter the name of the new repository: ")
