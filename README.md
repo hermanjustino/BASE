@@ -1,13 +1,8 @@
 # BASE
 
->
-__________    _____    ____________________
-\______   \  /  _  \  /   _____/\_   _____/
- |    |  _/ /  /_\  \ \_____  \  |    __)_ 
- |    |   \/    |    \/        \ |        |
- |______  /\____|__  /_______  //_______  /
-        \/         \/        \/         \/ 
->
+![Screenshot 2024-02-18 at 16 46 53](https://github.com/hermanjustino/BASE/assets/46625107/cdefbb00-3226-46d8-b9e4-ae10ddb4613f)
+
+
 Create an empty HTML project and initialise a local git repository
 
 BASE gives user an empty html project with css, javascript, and assets folder. You can alter js and css right out of the box.
