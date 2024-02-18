@@ -17,7 +17,9 @@ BASE gives user an empty html project with css, javascript, and assets folder. Y
 1. To use BASE make sure you have Python(or Python3) installed on your system
 2. In the directory with run.py run command
 > python run.py
+
 or if you have python 3
+
 > python3 run.py
 3. Create directory name
 4. Put absolute path where you want the directory to live
