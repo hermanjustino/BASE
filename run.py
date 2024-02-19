@@ -1,19 +1,20 @@
 import os
-import subprocess
 import time
+import subprocess
 
+# ASCII Art
 ascii_art = """
-__________    _____    ____________________
-\______   \  /  _  \  /   _____/\_   _____/
- |    |  _/ /  /_\  \ \_____  \  |    __)_ 
- |    |   \/    |    \/        \ |        |
- |______  /\____|__  /_______  //_______  /
-        \/         \/        \/         \/ 
+  ____  _____ _____ _____ 
+ | __ )| ____|  ___| ____|
+ |  _ \|  _| | |_  |  _|  
+ | |_) | |___|  _| | |___ 
+ |____/|_____|_|   |_____|
 """
 
+# Print each character one by one with a delay
 for char in ascii_art:
     print(char, end='', flush=True)
-    time.sleep(0.005)
+    time.sleep(0.01)  # delay of 0.01 seconds
 
 print("\n")
 
@@ -21,11 +22,22 @@ current_path = os.getcwd()
 
 print("====================================")
 print("You are currently in: " + current_path)
-print("====================================")
-print("\n")
+print("====================================\n")
 
-repo_name = input("Enter the name of the new repository: ")
-path = input("Enter the path where the repository will be created: ")
+init_repo = input("Do you want to initialize a Git repository here? (yes/no): ")
+
+typeOfRepo = "repository"
+
+if init_repo.lower() == "yes":
+    
+    subprocess.run(["git", "init"], check=True)
+    print("Git repository initialized.")
+else:
+    print("No Git repository initialized.")
+    typeOfRepo = "directory"
+
+repo_name = input("Enter the name of the new " + typeOfRepo + ":")
+path = input("Enter the path where the " + typeOfRepo + " will be created: ")
 
 full_path = os.path.join(path, repo_name)
 
