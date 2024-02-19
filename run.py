@@ -2,17 +2,16 @@ import os
 import time
 import subprocess
 
-# ASCII Art
-ascii_art = """
-  ____  _____ _____ _____ 
- | __ )| ____|  ___| ____|
- |  _ \|  _| | |_  |  _|  
- | |_) | |___|  _| | |___ 
- |____/|_____|_|   |_____|
+title = """
+__________    _____    ____________________
+\______   \  /  _  \  /   _____/\_   _____/
+ |    |  _/ /  /_\  \ \_____  \  |    __)_ 
+ |    |   \/    |    \/        \ |        |
+ |______  /\____|__  /_______  //_______  /
+        \/         \/        \/         \/ 
 """
 
-# Print each character one by one with a delay
-for char in ascii_art:
+for char in title:
     print(char, end='', flush=True)
     time.sleep(0.01)  # delay of 0.01 seconds
 
