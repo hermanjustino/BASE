@@ -25,3 +25,6 @@ or if you have python 3
 Note this also initializes a local git repo
 
 
+
+![Image 2024-10-20 at 4 23 PM](https://github.com/user-attachments/assets/b32ebaf7-1a74-47b8-812f-1973e2546855)
+
