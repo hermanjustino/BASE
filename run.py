@@ -23,20 +23,18 @@ print("====================================")
 print("You are currently in: " + current_path)
 print("====================================\n")
 
+
 init_repo = input("Do you want to initialize a Git repository here? (yes/no): ")
 
-typeOfRepo = "repository"
+repo_name = input("Enter the name of the new project:")
+path = input("Enter the path where the project will be created: ")
+
 
 if init_repo.lower() == "yes":
-    
     subprocess.run(["git", "init"], check=True)
     print("Git repository initialized.")
 else:
-    print("No Git repository initialized.")
-    typeOfRepo = "directory"
-
-repo_name = input("Enter the name of the new " + typeOfRepo + ":")
-path = input("Enter the path where the " + typeOfRepo + " will be created: ")
+    print("Directory created, No Git repository initialized.")
 
 full_path = os.path.join(path, repo_name)
 
@@ -67,7 +65,5 @@ with open(os.path.join(full_path, 'styles', 'styles.css'), 'w') as f:
 
 with open(os.path.join(full_path, 'scripts', 'scripts.js'), 'w') as f:
     f.write('// Add your JavaScript code here')
-
-subprocess.run(['git', 'init'], cwd=full_path)
 
 print("\nRepository setup completed successfully!")
